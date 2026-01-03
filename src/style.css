@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gh-dark: #0d1117;
+  --shadow-led: 0 0 10px rgba(34, 211, 238, 0.8), 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-[#0d1117] text-white m-0 p-0;
+    display: block; /* Esto quita el centrado de Vite */
+  }
+}
+
+/* Efecto de anillo de luz azul para la imagen (como en tu referencia) */
+.glow-border {
+  @apply relative rounded-full p-[4px] flex items-center justify-center;
+  background: #0d1117;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4), inset 0 0 10px rgba(56, 189, 248, 0.2);
+  border: 2px solid rgba(56, 189, 248, 0.5);
+}
+
+/* Efecto Neón para links activos */
+.shadow-led {
+  text-shadow: var(--shadow-led);
+  color: #22d3ee !important;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
